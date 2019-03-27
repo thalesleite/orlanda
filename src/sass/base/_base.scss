@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+* {
+  &::after,
+  &::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 62.5%; // 62.5% === 10px -> 10px x 100% / 16px(1rem)
+}
+
+body {
+  padding: 0 $distance-sides 0 $distance-sides;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+footer {
+  background-color: $color-green-water-dark;
+  color: $color-white;
+}
+
+.light {
+  border-top: 1px solid $color-white;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+.light-100 {
+  border-top: 1px solid $color-white;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+.margin {
+  margin: 0 $distance-sides 0 $distance-sides;
+}
+
+.top-nav {
+  padding-top: $height-menu-top;
+}
+
+.background-img {
+  //height: 120vh;
+  background-image: linear-gradient(
+                      to right bottom,
+                      rgba($color-white, 0.8),
+                      rgba($color-gray, 0.8)),
+                      url(/assets/img/image-background.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  &:first-child {
+    padding-top: 4rem;
+  }
+}
+
+.welcome {
+  h1 {
+    padding-top: 1rem;
+  }
+
+  hr {
+    border-top: 2px solid $color-gray;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+  }
+}

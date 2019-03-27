@@ -1,0 +1,14 @@
+@import "../../../sass/abstract/variables";
+@import "../../../sass/base/typography";
+@import "../../../sass/base/base";
+@import "../../../sass/base/media";
+
+.welcome {
+  p {
+    margin: 0 8rem 4rem 8rem;
+  }
+}
+
+section {
+  padding-bottom: 2rem;
+}

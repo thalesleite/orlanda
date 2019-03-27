@@ -1,0 +1,37 @@
+@import "../../sass/abstract/variables";
+@import "../../sass/base/typography";
+@import "../../sass/base/base";
+@import "../../sass/base/media";
+
+.services {
+  .row {
+    margin-top: 2rem;
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .services-box  {
+    background-color: rgba($color-white, .7);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border: $color-gray solid 1px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+
+    .icon {
+      font-size: 6rem;
+      margin-bottom: .4rem;
+      display: inline-block;
+      background-image: linear-gradient(to right, $color-green-water, $color-green-water-dark);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &:hover {
+      transform: translateY(-1.7rem) scale(1.03);
+    }
+  }
+}

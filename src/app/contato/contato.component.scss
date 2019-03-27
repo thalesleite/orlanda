@@ -1,0 +1,26 @@
+@import "../../sass/abstract/variables";
+@import "../../sass/base/typography";
+@import "../../sass/base/base";
+@import "../../sass/base/media";
+
+.form-contato {
+  button {
+    float: left;
+
+    &.btn-green-water {
+      background-color: $color-green;
+      color: white;
+      font-size: 1.2rem;
+      width: 50%;
+    }
+
+    &:hover {
+      box-shadow: 0 2rem 3rem rgba($color-black, .5);
+      background-color: rgba($color-green, .8);
+    }
+  }
+
+  label {
+    float: left;
+  }
+}

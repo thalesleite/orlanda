@@ -1,0 +1,24 @@
+@import "../../sass/abstract/variables";
+@import "../../sass/base/typography";
+@import "../../sass/base/base";
+@import "../../sass/base/media";
+
+.info-img {
+  padding: 2rem;
+
+  img {
+    margin-top: 2rem;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    transition: all .2s;
+    outline-offset: 1rem;
+
+    &:hover {
+      outline: .7rem solid $color-gray-dark;
+      transform: scale(1.2) translateY(-.8rem);
+      box-shadow: 0 2rem 3rem rgba($color-black, .5);
+    }
+  }
+  
+}

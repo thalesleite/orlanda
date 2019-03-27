@@ -1,0 +1,84 @@
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">contate-nos</h1>
+    </div>
+    <hr>
+
+    <div class="col-12">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-contato">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Nome" 
+                  formControlName="name" 
+                  [ngClass]="{ 'is-invalid': isSubmitted && formControls.name.errors }">
+                <div *ngIf="formControls.name.invalid && (formControls.name.dirty || formControls.name.touched)" class="invalid-feedback">
+                  <div *ngIf="formControls.name.errors.required">Favor informar o nome!</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" placeholder="Email"
+                  formControlName="email" 
+                  [ngClass]="{ 'is-invalid': isSubmitted && formControls.email.errors }">
+                <div *ngIf="formControls.email.invalid && (formControls.email.dirty || formControls.email.touched)" class="invalid-feedback">
+                  <div *ngIf="formControls.email.errors.required">Favor informar o email!</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="(99)99999-9999" 
+                  formControlName="cel" 
+                  [ngClass]="{ 'is-invalid': isSubmitted && formControls.cel.errors }">
+                <div *ngIf="formControls.cel.invalid && (formControls.cel.dirty || formControls.cel.touched)" class="invalid-feedback">
+                  <div *ngIf="formControls.cel.errors.required">Favor informar o celular ou telefone para contato!</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="subject">Assunto: </label>
+                <select class="form-control" formControlName="subject">
+                  <option value="1">Dúvida</option>
+                  <option value="2">Crítica</option>
+                  <option value="3">Sugestões</option>
+                  <option value="4">Orçamento</option>
+                  <option value="5">Outros</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <textarea class="form-control" rows="6" placeholder="Insira sua mensagem..." maxlength="1000"
+                formControlName="message" 
+                [ngClass]="{ 'is-invalid': isSubmitted && formControls.message.errors }"></textarea>
+                <div *ngIf="formControls.message.invalid && (formControls.message.dirty || formControls.message.touched)" class="invalid-feedback">
+                  <div *ngIf="formControls.message.errors.required">Favor digitar uma mensagem!</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <button type="submit" class="btn btn-green-water">Enviar</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

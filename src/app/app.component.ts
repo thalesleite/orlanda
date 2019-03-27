@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'orlanda';
+  currentYear: string;
+  date: Date = new Date();
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.currentYear = this.date
+                           .getFullYear()
+                           .toString();
+  }
+
 }

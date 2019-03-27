@@ -1,0 +1,32 @@
+<ngb-carousel *ngIf="images" class="carousel slide">
+    <ng-template ngbSlide>
+      <img class="img-blur" [src]="images[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <h1 class="display-2">Orlanda</h1>
+        <h3>Casa de Repouso</h3>
+        <p>Todo o conforto de um verdadeiro lar!</p>
+      </div>
+    </ng-template>
+    
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+    </ng-template>
+    
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide">
+    </ng-template>
+</ngb-carousel>
+
+<!-- Jumbotron -->
+<div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="col-xl-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <p class="lead">
+        <i>
+          "Todos os dias realizamos na casa de repouso alguma atividade como aulas de artesanato, pintura, jogos, musicoterapia,
+          ginástica entre muitas outras."
+        </i>
+      </p>
+    </div>
+  </div>
+</div>
