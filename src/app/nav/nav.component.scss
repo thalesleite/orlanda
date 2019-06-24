@@ -6,7 +6,7 @@ nav {
     background-color: $color-green-water;
 
     .navbar-nav { 
-        li {
+        li:not(last-child):before {
             padding-right: 1rem;
         }
     }
@@ -67,7 +67,7 @@ nav {
 
 .dropdown-toggle {
     &::after {
-        display:none;
+        display: none;
     }
 }
 
